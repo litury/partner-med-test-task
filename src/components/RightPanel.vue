@@ -3,7 +3,7 @@
     <div class="list" v-for="list in selectedLists" :key="list.id">
       <h1>{{ list.name }}</h1>
 
-      <button @click="shuffle">Перемешать</button>
+      <button class="button" @click="shuffle">Перемешать</button>
 
       <div class="items">
         <div v-for="item in list.items" :key="item.id">
@@ -78,6 +78,10 @@ function shuffleVueArray(array) {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   border-radius: 8px;
+}
+
+.button {
+  margin-bottom: 20px;
 }
 
 .items {
