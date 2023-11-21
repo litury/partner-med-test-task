@@ -18,7 +18,6 @@ const toggleCollapsed = () => {
       <font-awesome-icon icon="chevron-down" @click="toggleCollapsed" />
     </div>
 
-
     <div v-show="!collapsed" v-for="item in list.items" :key="item.id">
       <ItemComponent :item="item" :listId="list.id" />
     </div>
