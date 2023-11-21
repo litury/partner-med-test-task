@@ -1,37 +1,54 @@
-<script setup>
-
-const props = defineProps({
-  item: Object
-});
-</script>
-
 <template>
-  <div class="item-display">
-    <span>{{ item.name }}</span>
-
-    <div class="squares">
-      <div v-for="n in item.quantity" :key="n" class="square" :style="{ backgroundColor: item.color }"></div>
+  <div>
+    <div v-if="item.checked" class="item-squares">
+      <div
+          v-for="n in item.quantity"
+          :key="n"
+          class="square"
+          :style="{ backgroundColor: item.color }"
+          @click="removeItem(item.id)"
+      ></div>
     </div>
   </div>
 </template>
 
+<script setup>
+import { computed } from 'vue';
+import { useListStore } from '../stores/listsStore.js';
+
+const props = defineProps({
+  item: Object,
+  listId: Number,
+});
+
+const store = useListStore();
+
+const removeItem = (itemId) => {
+  store.removeItem(props.listId, itemId);
+};
+
+
+</script>
 
 <style>
-.item-display {
+.item-info {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.squares {
+.item-squares {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 10px;
+  gap: 5px;
+  width: 100%;
 }
 
 .square {
   width: 20px;
   height: 20px;
-  margin: 2px;
+  border: 1px solid #ccc;
+  cursor: pointer;
 }
 </style>
