@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "List 1",
+    "collapsed": true,
     "items": [
       {
         "id": "V1StGXR8_Z5jdHi6B-myT",
@@ -36,6 +37,7 @@
   {
     "id": 2,
     "name": "List 2",
+    "collapsed": true,
     "items": [
       {
         "id": "haer6077sgsgdgw23wrew",
@@ -77,6 +79,7 @@
   {
     "id": 3,
     "name": "List 3",
+    "collapsed": true,
     "items": [
       {
         "id": "qkjwhebqiuweh876876rf",
@@ -125,6 +128,7 @@
   {
     "id": 4,
     "name": "List 4",
+    "collapsed": true,
     "items": [
       {
         "id": "qkjwhebqiuwehjsbdchjg",
@@ -180,6 +184,7 @@
   {
     "id": 5,
     "name": "List 5",
+    "collapsed": true,
     "items": [
       {
         "id": "qkjwhebqiuwehjsbdchjn",
