@@ -1,13 +1,12 @@
 <template>
   <LeftPanel />
-<!--  <RightPanel />-->
-  <ListDisplay />
+  <RightPanel />
 </template>
 
 <script setup>
 import LeftPanel from './components/LeftPanel.vue';
-// import RightPanel from './components/RightPanel.vue';
-import ListDisplay from './components/ListDisplay.vue';
+import RightPanel from './components/RightPanel.vue';
+
 </script>
 
 <style></style>
