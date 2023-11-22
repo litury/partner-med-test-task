@@ -33,21 +33,9 @@ const removeItem = (itemId) => {
   console.log(itemId);
 };
 
-// const displayedSquares = ref(props.squares);
-
 const computedSquares = computed(() => {
   return props.squares;
 });
-
-// const react = reactive(props.squares)
-//
-// watch(() => props.squares, (newVal, oldVal) => {
-//   console.log("props.squares changed");
-//   console.log(newVal);
-//   console.log(oldVal);
-//
-//   console.log(computedSquares.value);
-// });
 
 const originalSquares = ref({});
 

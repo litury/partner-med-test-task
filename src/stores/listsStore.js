@@ -7,6 +7,7 @@ const lists = data;
 export const useListStore = defineStore("lists", {
   state: () => ({
     lists: lists,
+    displayedSquares: {},
   }),
 
   getters: {
@@ -32,6 +33,15 @@ export const useListStore = defineStore("lists", {
         item.checked = false;
       }
     },
+    
+    // Метод для обновления порядка элементов в ItemDisplay
+    updateDisplayedSquares(listId, squares) {
+      const list = this.lists.find((list) => list.id === listId);
+      if (list) {
+        list.displayedSquares = squares;
+      }
+    },
+  
 
     // Обновляет цвет для item
     updateColor(listId, itemId, color) {
